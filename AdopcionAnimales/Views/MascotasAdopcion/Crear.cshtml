@@ -1,0 +1,52 @@
+﻿@model ManejoAdopciones.Models.MascotaAdopcion
+
+@{
+    ViewData["Title"] = "Formulario de Adopción de Mascota";
+}
+
+<h2>Formulario de Adopción de Mascota</h2>
+
+<form asp-action="Crear" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Especie"></label>
+        <input asp-for="Especie" class="form-control" />
+        <span asp-validation-for="Especie" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Raza"></label>
+        <input asp-for="Raza" class="form-control" />
+        <span asp-validation-for="Raza" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Edad"></label>
+        <input asp-for="Edad" class="form-control" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="NombreAdoptante"></label>
+        <input asp-for="NombreAdoptante" class="form-control" />
+        <span asp-validation-for="NombreAdoptante" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EmailAdoptante"></label>
+        <input asp-for="EmailAdoptante" class="form-control" />
+        <span asp-validation-for="EmailAdoptante" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="TelefonoAdoptante"></label>
+        <input asp-for="TelefonoAdoptante" class="form-control" />
+        <span asp-validation-for="TelefonoAdoptante" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
